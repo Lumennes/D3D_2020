@@ -152,8 +152,8 @@ RotationConstraint:
   m_GameObject: {fileID: 486587292}
   m_Enabled: 1
   m_Weight: 1
-  m_RotationAtRest: {x: 0, y: 0, z: 0}
-  m_RotationOffset: {x: 1, y: 1, z: 1}
+  m_RotationAtRest: {x: 2.8687189, y: -46.228416, z: 1.2903242}
+  m_RotationOffset: {x: 0, y: 0, z: 0}
   m_AffectRotationX: 0
   m_AffectRotationY: 0
   m_AffectRotationZ: 0
@@ -231,7 +231,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 486587292}
-  m_LocalRotation: {x: 0.008724952, y: 0.017527273, z: 0.026021142, w: 0.9994697}
+  m_LocalRotation: {x: 0.018601904, y: -0.3926763, z: 0.020178763, w: 0.9192672}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
