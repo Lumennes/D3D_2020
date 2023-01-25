@@ -108,12 +108,12 @@ jobs:
           - iOS # Build an iOS player.
           - Android # Build an Android .apk.
           - WebGL # WebGL.
-          #          - StandaloneWindows # Build a Windows standalone.
-          #          - WSAPlayer # Build an Windows Store Apps player.
-          #          - PS4 # Build a PS4 Standalone.
-          #          - XboxOne # Build a Xbox One Standalone.
-          #          - tvOS # Build to Apple's tvOS platform.
-          #          - Switch # Build a Nintendo Switch player
+          - StandaloneWindows # Build a Windows standalone.
+          - WSAPlayer # Build an Windows Store Apps player.
+          - PS4 # Build a PS4 Standalone.
+          - XboxOne # Build a Xbox One Standalone.
+          - tvOS # Build to Apple's tvOS platform.
+          - Switch # Build a Nintendo Switch player
     steps:
       ###########################
       #         Checkout        #
@@ -129,8 +129,9 @@ jobs:
       - uses: actions/cache@v2
         with:
           path: Library
-          key: Library-${{ matrix.projectName }}-${{ matrix.targetPlatform }}
+          key: Library-${{ matrix.projectName }}-${{ matrix.targetPlatform }}-linux
           restore-keys: |
+            Library-${{ matrix.projectName }}-${{ matrix.targetPlatform }}-
             Library-${{ matrix.projectName }}-
             Library-
 
@@ -143,7 +144,7 @@ jobs:
           # unityVersion: ${{ matrix.unityVersion }}
           # buildName: ${{ matrix.projectName }}
           targetPlatform: ${{ matrix.targetPlatform }}
-          # buildMethod: UnityBuilderAction.BuildScript.Build
+          buildMethod: UnityBuilderAction.BuildScript.Build
           #customParameters: -profile SomeProfile -someBoolean -someValue exampleValue
           #cloudRunnerCluster: ${{ matrix.cloudRunnerCluster }}
           # allowDirtyBuild: true

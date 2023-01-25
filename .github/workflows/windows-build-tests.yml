@@ -42,8 +42,9 @@ jobs:
       - uses: actions/cache@v2
         with:
           path: Library
-          key: Library-${{ matrix.projectName }}-${{ matrix.targetPlatform }}
+          key: Library-${{ matrix.projectName }}-${{ matrix.targetPlatform }}-windows
           restore-keys: |
+            Library-${{ matrix.projectName }}-${{ matrix.targetPlatform }}-
             Library-${{ matrix.projectName }}-
             Library-
 
@@ -66,6 +67,7 @@ jobs:
           # projectPath: ${{ matrix.projectPath }}
           # unityVersion: ${{ matrix.unityVersion }}
           targetPlatform: ${{ matrix.targetPlatform }}
+          buildMethod: UnityBuilderAction.BuildScript.Build
           # customParameters: -profile SomeProfile -someBoolean -someValue exampleValue
           allowDirtyBuild: true
       # We use dirty build because we are replacing the default project settings file above
