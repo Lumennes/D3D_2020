@@ -102,10 +102,10 @@ jobs:
           # # - 2023.1.0a25
           # # - 2023.1.0a12
         targetPlatform:
-        #  - StandaloneOSX # Build a macOS standalone (Intel 64-bit).
+          - StandaloneOSX # Build a macOS standalone (Intel 64-bit).
           - StandaloneWindows64 # Build a Windows 64-bit standalone.
-        #  - StandaloneLinux64 # Build a Linux 64-bit standalone.
-        #  - iOS # Build an iOS player.
+          - StandaloneLinux64 # Build a Linux 64-bit standalone.
+          - iOS # Build an iOS player.
           - Android # Build an Android .apk.
           - WebGL # WebGL.
           #          - StandaloneWindows # Build a Windows standalone.
@@ -159,7 +159,7 @@ jobs:
           
       - uses: Difegue/action-megacmd@master
         with:
-          args: put -c build/${{ matrix.targetPlatform }} /Unity_projects/${{ matrix.projectName }}/${{ matrix.unityVersion }}/
+          args: put -c build/${{ matrix.targetPlatform }} /Unity_projects/${{ matrix.projectName }}/
         env:
           USERNAME: ${{ secrets.MEGA_USERNAME }}
           PASSWORD: ${{ secrets.MEGA_PASSWORD }}
