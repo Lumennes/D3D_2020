@@ -9,7 +9,7 @@ on:
 jobs:
   buildForAllPlatformsUbuntu:
     name: ${{ matrix.targetPlatform }}
-    runs-on: windows-2019
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
@@ -103,8 +103,8 @@ jobs:
           - StandaloneWindows64 # Build a Windows 64-bit standalone.
         #  - StandaloneLinux64 # Build a Linux 64-bit standalone.
         #  - iOS # Build an iOS player.
-          # - Android # Build an Android .apk.
-          # - WebGL # WebGL.
+          - Android # Build an Android .apk.
+          - WebGL # WebGL.
           #          - StandaloneWindows # Build a Windows standalone.
           #          - WSAPlayer # Build an Windows Store Apps player.
           #          - PS4 # Build a PS4 Standalone.
@@ -152,15 +152,15 @@ jobs:
       ###########################
       #          Upload         #
       ###########################
-      - uses: actions/upload-artifact@v2
-        with:
-          name: Build
-          path: build
-          retention-days: 14
-          
-      # - uses: Difegue/action-megacmd@master
+      # - uses: actions/upload-artifact@v2
         # with:
-          # args: put -c build/${{ matrix.targetPlatform }} /Unity_projects/${{ matrix.projectName }}/${{ matrix.unityVersion }}/
-        # env:
-          # USERNAME: ${{ secrets.MEGA_USERNAME }}
-          # PASSWORD: ${{ secrets.MEGA_PASSWORD }}
+          # name: Build
+          # path: build
+          # retention-days: 14
+          
+      - uses: Difegue/action-megacmd@master
+        with:
+          args: put -c build/${{ matrix.targetPlatform }} /Unity_projects/${{ matrix.projectName }}/${{ matrix.unityVersion }}/
+        env:
+          USERNAME: ${{ secrets.MEGA_USERNAME }}
+          PASSWORD: ${{ secrets.MEGA_PASSWORD }}
