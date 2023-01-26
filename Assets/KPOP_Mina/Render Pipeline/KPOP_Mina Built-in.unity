@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44952798, g: 0.49959844, b: 0.5756773, a: 1}
+  m_IndirectSpecularColor: {r: 0.44952738, g: 0.4995976, b: 0.5756763, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -178,8 +178,57 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3628821388868224927, guid: 7ab250a5baf7b87498458beb86b9cdf1, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.size
+      value: 52
+      objectReference: {fileID: 0}
+    - target: {fileID: 3628821388868224927, guid: 7ab250a5baf7b87498458beb86b9cdf1, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3628821388868224927, guid: 7ab250a5baf7b87498458beb86b9cdf1, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3628821388868224927, guid: 7ab250a5baf7b87498458beb86b9cdf1, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[2]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3628821388868224927, guid: 7ab250a5baf7b87498458beb86b9cdf1, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[3]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3628821388868224927, guid: 7ab250a5baf7b87498458beb86b9cdf1, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[4]
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ab250a5baf7b87498458beb86b9cdf1, type: 3}
+--- !u!1 &260591857 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 51989488875347213, guid: 7ab250a5baf7b87498458beb86b9cdf1, type: 3}
+  m_PrefabInstance: {fileID: 260591856}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &260591858
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260591857}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 41e41e0674a9f9946ac95608dcd2d505, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1001 &368621002
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -256,9 +305,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: SK_MINA_CASUAL_01_with_bones_in_skirt Black
       objectReference: {fileID: 0}
+    - target: {fileID: 1600321240148500903, guid: e2850260960851c47b6643b0e57d34a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2125324215193189149, guid: e2850260960851c47b6643b0e57d34a5, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 2125324215193189149, guid: e2850260960851c47b6643b0e57d34a5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -361,6 +414,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SK_MINA_PERFORMANCE_01_with_bones_in_skirt White
       objectReference: {fileID: 0}
+    - target: {fileID: 4717405331277969399, guid: 25a0c6b34d4386f44b4567ff6f3ed590, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5135585198449680786, guid: 25a0c6b34d4386f44b4567ff6f3ed590, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -371,7 +428,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: b4b3385dc8364b340abe3402ad505a9a, type: 2}
     - target: {fileID: 5349229120589606221, guid: 25a0c6b34d4386f44b4567ff6f3ed590, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5349229120589606221, guid: 25a0c6b34d4386f44b4567ff6f3ed590, type: 3}
       propertyPath: m_LocalPosition.x
@@ -523,7 +580,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 139.318, y: -30, z: 0}
 --- !u!1001 &726630169
 PrefabInstance:
@@ -536,9 +593,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: SK_MINA_PERFORMANCE_01_with_bones_in_skirt Red
       objectReference: {fileID: 0}
+    - target: {fileID: 4717405331277969399, guid: 25a0c6b34d4386f44b4567ff6f3ed590, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5349229120589606221, guid: 25a0c6b34d4386f44b4567ff6f3ed590, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5349229120589606221, guid: 25a0c6b34d4386f44b4567ff6f3ed590, type: 3}
       propertyPath: m_LocalPosition.x
@@ -609,6 +670,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SK_MINA_PERFORMANCE_01_with_bones_in_skirt Blue
       objectReference: {fileID: 0}
+    - target: {fileID: 4717405331277969399, guid: 25a0c6b34d4386f44b4567ff6f3ed590, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5135585198449680786, guid: 25a0c6b34d4386f44b4567ff6f3ed590, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -619,7 +684,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: b4b3385dc8364b340abe3402ad505a9a, type: 2}
     - target: {fileID: 5349229120589606221, guid: 25a0c6b34d4386f44b4567ff6f3ed590, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 5349229120589606221, guid: 25a0c6b34d4386f44b4567ff6f3ed590, type: 3}
       propertyPath: m_LocalPosition.x
@@ -698,9 +763,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: SK_MINA_CASUAL_01_with_bones_in_skirt White
       objectReference: {fileID: 0}
+    - target: {fileID: 1600321240148500903, guid: e2850260960851c47b6643b0e57d34a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2125324215193189149, guid: e2850260960851c47b6643b0e57d34a5, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 2125324215193189149, guid: e2850260960851c47b6643b0e57d34a5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -803,6 +872,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SK_MINA_PERFORMANCE_01_with_bones_in_skirt Green
       objectReference: {fileID: 0}
+    - target: {fileID: 4717405331277969399, guid: 25a0c6b34d4386f44b4567ff6f3ed590, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5135585198449680786, guid: 25a0c6b34d4386f44b4567ff6f3ed590, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -813,7 +886,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: b4b3385dc8364b340abe3402ad505a9a, type: 2}
     - target: {fileID: 5349229120589606221, guid: 25a0c6b34d4386f44b4567ff6f3ed590, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5349229120589606221, guid: 25a0c6b34d4386f44b4567ff6f3ed590, type: 3}
       propertyPath: m_LocalPosition.x
@@ -922,7 +995,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.01
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -950,7 +1023,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: 3.369, y: 1, z: 2}
+  m_LocalPosition: {x: -0.75, y: 1.62, z: 0.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -967,6 +1040,10 @@ PrefabInstance:
     - target: {fileID: 8183595835278921011, guid: 6b5bd1b027a8dfb4980df99d82efac99, type: 3}
       propertyPath: m_Name
       value: SM_MINA_PURSE Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183595835278921011, guid: 6b5bd1b027a8dfb4980df99d82efac99, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8852433789580400521, guid: 6b5bd1b027a8dfb4980df99d82efac99, type: 3}
       propertyPath: m_RootOrder
@@ -1033,9 +1110,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: SK_MINA_CASUAL_01_with_bones_in_skirt Green
       objectReference: {fileID: 0}
+    - target: {fileID: 1600321240148500903, guid: e2850260960851c47b6643b0e57d34a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2125324215193189149, guid: e2850260960851c47b6643b0e57d34a5, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2125324215193189149, guid: e2850260960851c47b6643b0e57d34a5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1111,6 +1192,32 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 7db60ca6c995f1e4883ef388bdbe27f7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2850260960851c47b6643b0e57d34a5, type: 3}
+--- !u!1 &1149462782 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1808839805254877324, guid: 7ab250a5baf7b87498458beb86b9cdf1, type: 3}
+  m_PrefabInstance: {fileID: 260591856}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1149462784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149462782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49585200bfd91e840927232902c9d1d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blendShapeCount: 52
+  skinnedMeshRenderer: {fileID: 1149462785}
+  skinnedMesh: {fileID: 3624917400950148610, guid: e64f81b0ee720f142a8c07cc87cad644, type: 3}
+  blendShapes: []
+--- !u!137 &1149462785 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3628821388868224927, guid: 7ab250a5baf7b87498458beb86b9cdf1, type: 3}
+  m_PrefabInstance: {fileID: 260591856}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1177688828
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1121,6 +1228,10 @@ PrefabInstance:
     - target: {fileID: 3683257261784245041, guid: 75d70fb8a14fe504ba5fbe81bb5ce17b, type: 3}
       propertyPath: m_Name
       value: SK_MINA_NUDE_Censored Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683257261784245041, guid: 75d70fb8a14fe504ba5fbe81bb5ce17b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4059535861668608395, guid: 75d70fb8a14fe504ba5fbe81bb5ce17b, type: 3}
       propertyPath: m_RootOrder
@@ -1195,6 +1306,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SK_MINA_PERFORMANCE_01_with_bones_in_skirt Black
       objectReference: {fileID: 0}
+    - target: {fileID: 4717405331277969399, guid: 25a0c6b34d4386f44b4567ff6f3ed590, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5135585198449680786, guid: 25a0c6b34d4386f44b4567ff6f3ed590, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1205,7 +1320,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: b4b3385dc8364b340abe3402ad505a9a, type: 2}
     - target: {fileID: 5349229120589606221, guid: 25a0c6b34d4386f44b4567ff6f3ed590, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5349229120589606221, guid: 25a0c6b34d4386f44b4567ff6f3ed590, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1284,9 +1399,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: SK_MINA_CASUAL_01_with_bones_in_skirt Blue
       objectReference: {fileID: 0}
+    - target: {fileID: 1600321240148500903, guid: e2850260960851c47b6643b0e57d34a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2125324215193189149, guid: e2850260960851c47b6643b0e57d34a5, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 2125324215193189149, guid: e2850260960851c47b6643b0e57d34a5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1389,6 +1508,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SK_MINA_PERFORMANCE_01_with_bones_in_skirt Violet
       objectReference: {fileID: 0}
+    - target: {fileID: 4717405331277969399, guid: 25a0c6b34d4386f44b4567ff6f3ed590, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5135585198449680786, guid: 25a0c6b34d4386f44b4567ff6f3ed590, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1399,7 +1522,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: b4b3385dc8364b340abe3402ad505a9a, type: 2}
     - target: {fileID: 5349229120589606221, guid: 25a0c6b34d4386f44b4567ff6f3ed590, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5349229120589606221, guid: 25a0c6b34d4386f44b4567ff6f3ed590, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1470,9 +1593,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: SK_MINA_CASUAL_01_with_bones_in_skirt Pink
       objectReference: {fileID: 0}
+    - target: {fileID: 1600321240148500903, guid: e2850260960851c47b6643b0e57d34a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2125324215193189149, guid: e2850260960851c47b6643b0e57d34a5, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2125324215193189149, guid: e2850260960851c47b6643b0e57d34a5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1551,9 +1678,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: SK_MINA_CASUAL_01_with_bones_in_skirt Violet
       objectReference: {fileID: 0}
+    - target: {fileID: 1600321240148500903, guid: e2850260960851c47b6643b0e57d34a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2125324215193189149, guid: e2850260960851c47b6643b0e57d34a5, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2125324215193189149, guid: e2850260960851c47b6643b0e57d34a5, type: 3}
       propertyPath: m_LocalPosition.x
