@@ -141,7 +141,7 @@ jobs:
         with:
           #projectPath: ${{ matrix.projectPath }}
           # unityVersion: ${{ matrix.unityVersion }}
-          # buildName: ${{ matrix.projectName }}
+          buildName: ${{ matrix.projectName }}
           targetPlatform: ${{ matrix.targetPlatform }}
           buildMethod: UnityBuilderAction.BuildScript.Build
           #customParameters: -profile SomeProfile -someBoolean -someValue exampleValue

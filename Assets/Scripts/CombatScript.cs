@@ -43,6 +43,21 @@ public class CombatScript : MonoBehaviour
     int animationCount = 0;
     string[] attacks;
 
+    [Space]
+    public bool autoBattle;
+    public float startAutoBattleDelay = 1;
+    public float repeatAutoBattleDelay = 1;
+
+
+    private void OnApplicationFocus(bool focus)
+    {
+        Cursor.visible = !focus;
+        Cursor.lockState = focus ? CursorLockMode.Locked : CursorLockMode.None;
+        Debug.Log(  $"focus: {focus}\n" +
+                    $"Cursor.visible: {Cursor.visible}\n" +
+                    $"Cursor.lockState: {Cursor.lockState}");
+    }
+
     void Start()
     {
         enemyManager = FindObjectOfType<EnemyManager>();
@@ -53,6 +68,14 @@ public class CombatScript : MonoBehaviour
 
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+
+        InvokeRepeating(nameof(AutoBattle), startAutoBattleDelay, repeatAutoBattleDelay);
+    }
+
+    void AutoBattle()
+    {
+        //CounterCheck();
+        AttackCheck();
     }
 
     //This function gets called whenever the player inputs the punch action
