@@ -97,7 +97,6 @@ namespace StarterAssets
         private int _animIDJump;
         private int _animIDFreeFall;
         private int _animIDMotionSpeed;
-        private int _animIDAttack;
 
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
         private PlayerInput _playerInput;
@@ -157,7 +156,6 @@ namespace StarterAssets
         {
             _hasAnimator = TryGetComponent(out _animator);
 
-            Attack();
             JumpAndGravity();
             GroundedCheck();
             Move();
@@ -175,13 +173,12 @@ namespace StarterAssets
             _animIDJump = Animator.StringToHash("Jump");
             _animIDFreeFall = Animator.StringToHash("FreeFall");
             _animIDMotionSpeed = Animator.StringToHash("MotionSpeed");
-            _animIDAttack = Animator.StringToHash("Attack");
         }
 
         private void GroundedCheck()
         {
             // set sphere position, with offset
-            Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y - GroundedOffset,
+            Vector3 spherePosition = new(transform.position.x, transform.position.y - GroundedOffset,
                 transform.position.z);
             Grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers,
                 QueryTriggerInteraction.Ignore);
@@ -282,32 +279,6 @@ namespace StarterAssets
             }
         }
 
-        bool inAttack;
-        float time;
-
-        private void Attack()
-        {
-            if(Grounded)
-            {
-                if(/*!inAttack &&*/ _input.attack)
-                {
-                    //time = 0;
-                    //inAttack = true;
-                    _animator.SetTrigger(_animIDAttack);
-                    _input.attack = false;
-                }
-            }
-
-            //if(inAttack)
-            //{
-            //    time += Time.deltaTime;
-            //    if(time > 2)
-            //    {
-            //        inAttack = false;
-            //    }
-            //}
-        }
-
         private void JumpAndGravity()
         {
             if (Grounded)
@@ -386,8 +357,8 @@ namespace StarterAssets
 
         private void OnDrawGizmosSelected()
         {
-            Color transparentGreen = new Color(0.0f, 1.0f, 0.0f, 0.35f);
-            Color transparentRed = new Color(1.0f, 0.0f, 0.0f, 0.35f);
+            Color transparentGreen = new (0.0f, 1.0f, 0.0f, 0.35f);
+            Color transparentRed = new (1.0f, 0.0f, 0.0f, 0.35f);
 
             if (Grounded) Gizmos.color = transparentGreen;
             else Gizmos.color = transparentRed;
