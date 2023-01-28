@@ -67977,7 +67977,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 719249599, guid: 635429b722a72604b9d8d113df87a56b, type: 3}
       propertyPath: autoBattle
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 719249599, guid: 635429b722a72604b9d8d113df87a56b, type: 3}
       propertyPath: lastHitCamera

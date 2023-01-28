@@ -65,17 +65,32 @@ public class CombatScript : MonoBehaviour
         enemyDetection = GetComponentInChildren<EnemyDetection>();
         movementInput = GetComponent<MovementInput>();
         impulseSource = GetComponentInChildren<CinemachineImpulseSource>();
-
+        // скрыть и закрепить курсор
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        //
+        if (autoBattle)
+            InvokeRepeating(nameof(AutoBattle), startAutoBattleDelay, repeatAutoBattleDelay);
+    }
 
-        InvokeRepeating(nameof(AutoBattle), startAutoBattleDelay, repeatAutoBattleDelay);
+    void ToogleAutoBattle()
+    {
+        autoBattle = !autoBattle;
+
+        if (autoBattle)
+            InvokeRepeating(nameof(AutoBattle), startAutoBattleDelay, repeatAutoBattleDelay);
+        else
+            CancelInvoke(nameof(AutoBattle));
     }
 
     void AutoBattle()
     {
         //CounterCheck();
-        AttackCheck();
+        
+        if (enemyManager.AliveEnemyCount() > 0)
+            AttackCheck();
+        else
+            CancelInvoke(nameof(AutoBattle));
     }
 
     //This function gets called whenever the player inputs the punch action
@@ -309,6 +324,11 @@ public class CombatScript : MonoBehaviour
     private void OnAttack()
     {
         AttackCheck();
+    }
+
+    void OnAutoBattle()
+    {
+        ToogleAutoBattle();
     }
 
     #endregion
