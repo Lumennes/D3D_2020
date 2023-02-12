@@ -65,7 +65,7 @@ public class CombatScript : MonoBehaviour
         enemyDetection = GetComponentInChildren<EnemyDetection>();
         movementInput = GetComponent<MovementInput>();
         impulseSource = GetComponentInChildren<CinemachineImpulseSource>();
-        // скрыть и закрепить курсор
+        // СЃРєСЂС‹РІР°РµРј
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         //
@@ -83,7 +83,7 @@ public class CombatScript : MonoBehaviour
             CancelInvoke(nameof(AutoBattle));
     }
 
-    void AutoBattle()
+    public void AutoBattle()
     {
         //CounterCheck();
         
