@@ -10,7 +10,7 @@ env:
   
 jobs:
   buildForAllPlatformsUbuntu:
-    name: ${{ matrix.targetPlatform }}
+    name: ${{ matrix.targetPlatform }} ${{ matrix.unityVersion }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
