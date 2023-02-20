@@ -22,8 +22,9 @@ jobs:
         #  - local
         #projectPath:
         #  - test-project
-        # unityVersion:
-          # - 2021.3.16f1
+        unityVersion:
+          - 2022.2.6f1
+          - 2021.3.18f1
           # - 2021.3.15f1
           # - 2021.3.14f1
           # - 2021.3.13f1
@@ -101,10 +102,10 @@ jobs:
           # # - 2023.1.0a25
           # # - 2023.1.0a12
         targetPlatform:
-          - StandaloneOSX # Build a macOS standalone (Intel 64-bit).
+          # - StandaloneOSX # Build a macOS standalone (Intel 64-bit).
           - StandaloneWindows64 # Build a Windows 64-bit standalone.
-          - StandaloneLinux64 # Build a Linux 64-bit standalone.
-          - iOS # Build an iOS player.
+          # - StandaloneLinux64 # Build a Linux 64-bit standalone.
+          # - iOS # Build an iOS player.
           - Android # Build an Android .apk.
           - WebGL # WebGL.
           - StandaloneWindows # Build a Windows standalone.
@@ -140,13 +141,13 @@ jobs:
       - uses: game-ci/unity-builder@v2
         with:
           #projectPath: ${{ matrix.projectPath }}
-          # unityVersion: ${{ matrix.unityVersion }}
+          unityVersion: ${{ matrix.unityVersion }}
           buildName: ${{ matrix.projectName }}
           targetPlatform: ${{ matrix.targetPlatform }}
           buildMethod: UnityBuilderAction.BuildScript.Build
           #customParameters: -profile SomeProfile -someBoolean -someValue exampleValue
           #cloudRunnerCluster: ${{ matrix.cloudRunnerCluster }}
-          # allowDirtyBuild: true
+          allowDirtyBuild: true
 
       ###########################
       #          Upload         #
@@ -159,7 +160,7 @@ jobs:
           
       - uses: Difegue/action-megacmd@master
         with:
-          args: put -c build/${{ matrix.targetPlatform }} /Unity_projects/${{ matrix.projectName }}/2/
+          args: put -c build/${{ matrix.targetPlatform }} /Unity_projects/${{ matrix.projectName }}/${{ matrix.projectName }}_${{ matrix.unityVersion }}_${{ matrix.targetPlatform }}/
         env:
           USERNAME: ${{ secrets.MEGA_USERNAME }}
           PASSWORD: ${{ secrets.MEGA_PASSWORD }}

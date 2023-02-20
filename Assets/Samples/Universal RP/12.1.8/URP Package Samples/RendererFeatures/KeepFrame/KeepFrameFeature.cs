@@ -27,7 +27,8 @@ public class KeepFrameFeature : ScriptableRendererFeature
 
             CommandBuffer cmd = CommandBufferPool.Get("CopyFramePass");
             RenderTargetIdentifier opaqueColorRT = destination.Identifier();
-            Blit(cmd, source, opaqueColorRT);
+            // Todo:            
+            // Blit(cmd, source, opaqueColorRT);
             context.ExecuteCommandBuffer(cmd);
             CommandBufferPool.Release(cmd);
         }
